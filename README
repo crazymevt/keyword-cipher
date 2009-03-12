@@ -1,0 +1,18 @@
+This program was written to create a keyword cipher stand alone app that can be run on the unix operating system.  
+
+It was Developed using SBCL, and reads parameters from the command line
+
+to compile this code load it into lisp
+(load (compile-file "keyword.lisp"))
+
+then 
+(save-lisp-and-die "keyword" :executable t :top-level :save-runtime-options t)
+
+this should produce and executable called keyword
+
+usage is as follows
+
+keyword {e | d} <keyword> <letter> <input filename>
+use e to encrypt and d to decrypt
+
+All output goes to standard out, use > the redirect output to a file if you wish
